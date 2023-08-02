@@ -1,8 +1,6 @@
 package com.example.intern_mentor_demo.controller.userController;
 
 import com.example.intern_mentor_demo.entity.ResponseDTO;
-import com.example.intern_mentor_demo.entity.user.Intern;
-import com.example.intern_mentor_demo.entity.user.InternMentorData;
 import com.example.intern_mentor_demo.entity.user.Mentor;
 import com.example.intern_mentor_demo.service.userService.MentorService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -69,20 +67,6 @@ public class MentorController {
         );
     }
 
-//    @PutMapping("/addInterns")
-//    public ResponseEntity<ResponseDTO> addInternsToMentor(@RequestBody InternMentorData data) {
-//        Intern intern = data.getIntern();
-//        Mentor mentor = data.getMentor();
-//        Mentor newMentor = mentorService.addInternToMentor(intern, mentor);
-//        if (newMentor == null) {
-//            return ResponseEntity.status(HttpStatus.NO_CONTENT).body(
-//                    new ResponseDTO<>("204", "Please check what you inserted", " ")
-//            );
-//        }
-//        return ResponseEntity.status(HttpStatus.OK).body(
-//                new ResponseDTO<>("200", "Add intern successfully", newMentor)
-//        );
-//    }
 
     @DeleteMapping("/{id}")
     ResponseEntity<ResponseDTO> deleteMentor(@PathVariable("id") Long id){
